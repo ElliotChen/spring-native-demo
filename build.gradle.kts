@@ -2,9 +2,9 @@ import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	val kotlinVersion = "1.4.21"
-	val springVersion = "2.4.2"
-	val springDependencyManagementVersion = "1.0.10.RELEASE"
+	val kotlinVersion = "2.1.0"
+	val springVersion = "3.4.1"
+	val springDependencyManagementVersion = "1.1.7"
 
 	// IntelliJ
 	idea
@@ -28,7 +28,7 @@ plugins {
 }
 
 allprojects {
-	group = "de.mrclrchtr.education"
+	group = "tw.elliot.native"
 	version = "1.1"
 
 	repositories {
@@ -47,9 +47,9 @@ subprojects {
 	tasks.withType<KotlinCompile> {
 		println("Configuring KotlinCompile  $name in project ${project.name}...")
 		kotlinOptions {
-			languageVersion = "1.4"
-			apiVersion = "1.4"
-			jvmTarget = "11"
+			languageVersion = "2.1.0"
+			apiVersion = "2.1.0"
+			jvmTarget = "23"
 			freeCompilerArgs = listOf("-Xjsr305=strict")
 		}
 	}
